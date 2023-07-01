@@ -2,7 +2,6 @@
 <?php include './includes/head.php'; ?>
 <?php include './includes/navbar.php'; ?>
 <div class="container mt-4">
-
     <?php
     // Check if the post ID is provided in the query string
     if (isset($_GET["id"])) {
@@ -29,13 +28,11 @@
         } else {
             echo "No post found.";
         }
-
         $stmt->close();
     } else {
         echo "Invalid post ID.";
     }
     ?>
-
 </div>
 <?php include './includes/footer.php'; ?>
 <?php $conn->close(); ?>
