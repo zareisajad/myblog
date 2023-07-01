@@ -1,6 +1,6 @@
 <nav >
   <a  href="/">Index</a>
-  <a  href="index.php">Blog</a>
-  <a  href="index.php">Daily</a>
-  <a  href="index.php">Email</a>
+  <a  href="blog.php">Blog</a>
+  <a  href="daily.php">Daily</a>
+  <a  href="mailto:zareisajad@protonmail.com">Email</a>
 </nav>

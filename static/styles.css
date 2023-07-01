@@ -1,20 +1,26 @@
 @font-face {font-family: yekan-regular;font-display:swap;src: url('./IRANYekanWebRegular.woff') format("woff") ;}
 
-* {
+body {
     font-family: 'yekan-regular';
-}
 
+}
 .container {
     width: 700px;
     max-width: 100%;
     margin: 0 auto;
 }
 
+.index {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
 nav {
     background-color: rgb(238, 238, 238);
     padding: 10px;
 }
-
+nav a {
+    margin-right: 10px;
+}
 .post-form {
     width: 1200px;
     margin: 0 auto;
@@ -25,6 +31,12 @@ img {
     max-width: 100%;
 }
 
+.post {
+    border-bottom: 1px solid #ccc;
+    padding: 20px 0;
+    direction: rtl;
+}
+
 .post img {
     width: 100% !important;
     height: 400px;
@@ -33,10 +45,18 @@ img {
 
 .post-date {
     color: rgb(121, 121, 121);
+    font-size: 13px;
+    margin: 0;
 }
 
-   /* Add the following CSS code to style the table */
-   table {
+.archive-post-title {
+    margin: 0;
+    display: inline-block;
+}
+
+
+
+table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
@@ -53,7 +73,6 @@ table th {
     text-align: left;
 }
 
-/* Add the following CSS code to make the table responsive */
 @media (max-width: 768px) {
     table {
         display: block;
