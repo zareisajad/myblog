@@ -25,9 +25,9 @@
         echo "No posts available.";
     }
     ?>
-
-
+    
 </div>
+
 <?php include './includes/footer.php'; ?>
 
 <?php $conn->close(); ?>
