@@ -6,11 +6,10 @@
 
 <p>
 Hi, I'm Sajad, a web developer from Iran. <br>
-four years ago, I was frying hamburgers at a fast food restaurant.
-And I'm now a full-stack developer and also a vegan. But don't worry, there's no need to panic!
+I'm a full-stack developer!
 </p>
 <p>
-    I'm currently a co-founder at <a href="https://ponezweb.com" rel="nofollow">Ponezweb</a>. <br>
+    And currently a co-founder at <a href="https://ponezweb.com" rel="nofollow">Ponezweb</a>. <br>
     and working on some exciting projects which I'll write about on <a href="blog.php">my blog</a>.
     I also publish <a href="daily.php">daily updates here</a> sometimes.
 </p>
@@ -20,30 +19,8 @@ And I'm now a full-stack developer and also a vegan. But don't worry, there's no
 
 <small>- Have a Great Day.</small>
 
-
-<hr>
-
-<h3>Latest Entries</h3>
-
-<?php
-        $sql = "SELECT * FROM blog ORDER BY created_at DESC";
-        $result = $conn->query($sql);
-
-        if ($result->num_rows > 0) {
-            while ($row = $result->fetch_assoc()) {
-                echo "<div class='post' style='direction:rtl'>";
-                echo "<a href='post.php?id=" . $row["id"] . "'> <h2 class='archive-post-title'>" . $row["title"] . "</h2> </a>";
-                $timestamp = $row["created_at"];
-                $day = date('d', strtotime($timestamp));
-                $month = date('M', strtotime($timestamp));
-                $year = date('Y', strtotime($timestamp));
-                echo "<p class='post-date'>" . $year . " " . $day . "". $month ."  </p> ";
-                echo "</div>";
-            }
-        } else {
-            echo "No posts available.";
-        }
-    ?>
+<hr />
+<a href="http://www.arachnoid.com/freezone"><img src="./static/freezone1.jpg" width="440" height="40" alt="Internet Free Zone Level 1"></a> 
 
 </div>
 <?php include './includes/footer.php'; ?>
