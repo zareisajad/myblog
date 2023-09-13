@@ -1,7 +1,10 @@
-@font-face {font-family: yekan-regular;font-display:swap;src: url('./IRANYekanWebRegular.woff') format("woff") ;}
+@font-face {font-family: vazirReg;font-display:swap;src: url('../static/fonts/Vazirmatn-Regular.woff2') format("woff2") ;}
+@font-face {font-family: vazirMed;font-display:swap;src: url('../static/fonts/Vazirmatn-Medium.woff2') format("woff2") ;}
+@font-face {font-family: vazirBold;font-display:swap;src: url('../static/fonts/Vazirmatn-Bold.woff2') format("woff2") ;}
+@font-face {font-family: vazirThin;font-display:swap;src: url('../static/fonts/Vazirmatn-Thin.woff2') format("woff2") ;}
 
 body {
-    font-family: 'yekan-regular';
+    font-family: vazirReg;
 
 }
 .container {
