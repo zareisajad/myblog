@@ -56,7 +56,7 @@ import Logs from '../content/logs/logs.md'
 			</details>
 			<section >
 					{
-						posts.map((post) => (
+						posts.reverse().map((post) => (
 							<div class="post-item">
 								<p class="date"><FormattedDate date={post.data.pubDate} /></p>
 								<a href={`/${post.slug}/`}>{post.data.title}</a>

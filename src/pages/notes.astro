@@ -50,7 +50,7 @@ const notes = (await getCollection('notes')).sort(
 				<h2>Notes</h2>
 				<p>*I keep random/daily notes/updates here:</p>
 					{
-						notes.map((post) => (
+						notes.reverse().map((post) => (
 							<div class="note-item">
 								<a href={`/notes/${post.slug}/`}>{post.data.title}</a>
 								<span  style="margin:0 10px;">-</span>
