@@ -1,0 +1,200 @@
+
+:root {
+	--accent: #ffffff;
+	--accent-dark: #000d8a;
+	--black: 15, 18, 25;
+	--gray: 96, 115, 159;
+	--gray-light: 229, 233, 240;
+	--gray-dark: 34, 41, 57;
+	--gray-gradient: rgba(var(--gray-light), 50%), #ffffff85;
+	--box-shadow: 0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
+		0 16px 32px rgba(var(--gray), 33%);
+}
+@font-face {
+	font-family: vazirLight;
+	src: url('/fonts/Vazirmatn-Light.woff2') format('woff2');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: vazirExtraBold;
+	src: url('/fonts/Vazirmatn-SemiBold.woff2') format('woff2');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+body {
+	font-family: vazirLight, sans-serif;
+	margin: 0;
+	padding: 50px 0 0 0 ;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	color:white;
+	font-size: 15px;
+	background: #181a1b;
+}
+main {
+	width: 720px;
+	max-width: calc(100% - 2em);
+	margin:0 auto;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	color: white;
+	font-family: vazirExtraBold;
+}
+.logs p {margin: 0;}
+strong,
+b {
+	font-weight: 700;
+}
+nav a {
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-size: 1rem;
+	line-height: 1.6;
+}
+a {
+	color: var(--accent);
+}
+a:hover {
+	color: var(--accent) ;
+	text-decoration: underline wavy !important;
+}
+
+.prose p {
+	margin-bottom: 2em;
+}
+textarea {
+	width: 100%;
+	font-size: 16px;
+}
+input {
+	font-size: 16px;
+}
+table {
+	width: 100%;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+code {
+	padding: 2px 5px;
+	background-color: rgb(var(--gray-light));
+	direction: ltr;
+}
+pre {
+	padding: 1.5em;
+	direction: ltr;
+}
+
+pre > code {
+	all: unset;
+}
+blockquote {
+	border-left: 4px solid var(--accent);
+	padding: 0 0 0 20px;
+	margin: 0px;
+	font-size: 1.333em;
+}
+hr {
+	border: none;
+	border-top: 1px solid rgb(var(--gray-light));
+}
+
+.sr-only {
+	border: 0;
+	padding: 0;
+	margin: 0;
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	/* IE6, IE7 - a 0 height clip, off to the bottom right of the visible 1px box */
+	clip: rect(1px 1px 1px 1px);
+	/* maybe deprecated but we need to support legacy browsers */
+	clip: rect(1px, 1px, 1px, 1px);
+	/* modern browsers, clip-path works inwards from each corner */
+	clip-path: inset(50%);
+	/* added line to stop words getting smushed together (as they go onto seperate lines and some screen readers do not understand line feeds as a space */
+	white-space: nowrap;
+}
+
+h1 {
+	font-size: 25px;
+	word-spacing: -.18em;
+}
+.social a {
+	text-decoration: none;
+	font-size: 13px;
+	color: #999999;
+}
+details {
+	cursor: pointer;
+	margin-bottom: 10px;
+}
+.logs {
+	font-family: monospace;
+	font-weight: 600;
+	font-size:12px;
+	background: #002b36;
+	color: #627b83;
+	padding: 3px;
+	max-height: 130px;
+	overflow: auto;
+	cursor: text;
+	margin-top: 5px;
+
+}
+
+.logs a {
+	color: #e33926 !important;
+}
+.logs a:hover {
+	text-decoration: underline !important;
+}
+log {
+	color: #009f98;
+}
+command {
+	color:#008dd3
+}
+@media screen and (max-width: 600px) {
+	h1 {
+		font-size: 21px;
+	}
+
+}
+@media screen and (max-width: 600px) {
+
+	nav a, .date {
+		font-size: 14px;
+	}
+	.prose p {
+		font-size: 14px;
+		line-height: 1.8;
+	}
+
+
+
+}
+
+@media screen and (max-width: 1025px) {
+	body{
+		padding: 20px 0 0 0;
+	}
+	nav {
+		margin-bottom: 15px;
+		border-bottom: 1px solid #cccccc49;
+		padding-bottom: 10px;
+	}
+
+}

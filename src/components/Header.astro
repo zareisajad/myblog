@@ -1,0 +1,50 @@
+---
+import HeaderLink from './HeaderLink.astro';
+import { SITE_TITLE } from '../consts';
+---
+
+<header dir="ltr">
+	<nav>
+		<div class="">
+			<a href="/"><img width="90" src="/favicon.png" alt="frog"></a>
+			<h1><a href="/">Sajad Zarei</a></h1>
+			<HeaderLink title={'I keep random/daily notes/updates here'} href="/notes">Notes</HeaderLink>
+			<HeaderLink title={'Books I read'} href="/reading">Reading</HeaderLink>
+			<HeaderLink title={'My public Url Bookmarks'} href="/links">Links</HeaderLink>
+			<HeaderLink title={'Random photos I like'} href="/photos">Photos</HeaderLink>
+			<HeaderLink title={'Who am I'} href="/about">About</HeaderLink>
+			<HeaderLink title={'Rss feed'} href="/rss.xml">Rss</HeaderLink>
+		</div>
+
+	</nav>
+</header>
+<style>
+
+	h1 {
+		margin: 0;
+		font-size: 1em;
+	}	
+
+	h1 a,
+	h1 a.active {
+		text-decoration: none;
+	}
+	nav {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+
+	@media screen and (min-width: 1025px) {
+		nav {
+			position: absolute;
+			top: 52px;
+			right: 50%;
+			margin-right: 350px !important;
+			letter-spacing: -.009em;
+		}
+	}
+
+
+</style>
