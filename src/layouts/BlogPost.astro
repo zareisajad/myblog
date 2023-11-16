@@ -12,33 +12,41 @@ const { title, description } = Astro.props;
 	<head>
 		<BaseHead title={title} description={description} />
 		<style>
-			main {
-				width: 600px;
-				max-width: calc(100% - 2em);
-				margin: 0 auto;
+
+			.title {
+				padding: 20px;
+				border: 1px solid white;
 			}
-
-
+			
+	
 		</style>
 	</head>
 
 	<body >
+		<Header />
 		<main>
-			<Header />
 			<article>
 
 				<div class="prose">
 					<div class="title">
 						<h1>{title}</h1>
 					</div>
+					<p style="direction:ltr;margin-bottom:0" class="readingTime"></p>
 					<slot />
 					<span></span>
-					<div style="direction: ltr;" class="social">
-						<a href="mailto:zareisajad98@gmail.com">zareisajad98@gmail.com</a>
-					</div>
+
 					
 				</div>
 			</article>
 		</main>
+
+		<script>
+			const postContent = document.querySelector('.prose').textContent;
+			const wordsArray = postContent.split(' ')
+			const wordCount = wordsArray.length;
+			const wordsPerMinute = 200;
+			const readingTime = Math.ceil(wordCount / wordsPerMinute);
+			document.querySelector('.readingTime').textContent = readingTime + ' min read'
+		</script>
 	</body>
 </html>

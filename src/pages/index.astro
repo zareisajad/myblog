@@ -8,21 +8,28 @@ import FormattedDate from '../components/FormattedDate.astro';
 const posts = (await getCollection('blog')).sort(
 	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
 );
-import Logs from '../content/logs/logs.md'
 ---
 <!doctype html>
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 		<style>
-			main {
-				width: 600px;
-			}
+
 			.post-item {
 				display: flex;
 				justify-content: space-between;
 				align-items: center;
 				flex-wrap: wrap;
+				border-bottom: 1px solid white;
+				border-left: 1px solid white;
+				border-right: 1px solid white;
+				padding: 30px 20px;
+			}
+			.post-item:first-child {
+				border-top: 1px solid white;
+			}
+			.post-item:hover {
+				background-color: black;
 			}
 
 			.post-item h4 {
@@ -30,7 +37,7 @@ import Logs from '../content/logs/logs.md'
 
 			}
 
-			.post-item a {
+			.post-item  {
 				text-decoration: none;	
 			}
 			.date {
@@ -38,31 +45,24 @@ import Logs from '../content/logs/logs.md'
 				font-size:14px;
 			}
 
-			a:hover {
-				text-decoration: underline  wavy  !important;
-			}
 
-		</style>
+	
+		</style> 
 	</head>
 	<body>
-		<main>
-			<Header />
+		<Header />
 
-			<details>
-				<summary>logs</summary>
-				<div class="logs">
-					<Logs />
-				</div>
+		<main style="margin-top: 20px;">
 			</details>
 			<section >
-					{
-						posts.reverse().map((post) => (
-							<div class="post-item">
-								<p class="date"><FormattedDate date={post.data.pubDate} /></p>
-								<a href={`/${post.slug}/`}>{post.data.title}</a>
-							</div>
-						))
-					}
+				{
+					posts.reverse().map((post) => (
+						<a href={`/${post.slug}/`} class="post-item">
+							<p class="date"><FormattedDate date={post.data.pubDate} /></p>
+							<span>{post.data.title}</span>
+						</a>
+					))
+				}
 			</section>
 
 		</main>
