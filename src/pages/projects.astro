@@ -1,0 +1,42 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<style>
+
+
+	
+		</style> 
+	</head>
+	<body>
+		<Header />
+
+		<main style="margin-top: 20px;">
+			<div class="" style="text-align: right;background-color: black; padding:30px;margin-bottom: 20px;">
+				<a href="https://dinez.ir" style="text-decoration: none;"> 
+					<div class="">
+						<img src="/img/dinez.png"  alt="dinez website screenshot">
+						<h2>داینِز</h3>
+						<span>منوی دیجیتال کافه و رستوران</span>
+					</div>
+				</a>
+			</div>
+			<div class="" style="text-align: right;background-color: black; padding:30px;margin-bottom: 20px;">
+				<a href="https://ponezweb.com" style="text-decoration: none;"> 
+					<div class="">
+						<img src="/img/pw.png"  alt="ponezweb website screenshot">
+						<h2>پونزوب</h3>
+						<span>سیستم یکپارچه مشتریان و فریلنسرها</span>
+					</div>
+				</a>
+			</div>
+
+		</main>
+	</body>
+</html>
